@@ -1,7 +1,9 @@
 CodeSelfStudy.com
 =================
 
-This is the CodeSelfStudy.com website rebuilt in Flask with Python 3. More info will be posted here soon.
+This is the CodeSelfStudy.com website rebuilt in Flask with Python 3. Before contributing, please carefully read the licensing information in this document.
+
+More info will be posted here soon.
 
 Branches
 --------
@@ -65,4 +67,4 @@ Licenses
 The loader.gif is from loading.io. The terms of use when downloaded on July 1, 2015 are: "Term of Use
 All materials used in generating animated icons in this website, except the g0v icon, are created by loading.io. You can use them freely for any purpose."
 
-DO NOT ADD COPYRIGHTED CODE TO THIS REPOSITORY. BY COMMITING CODE TO THIS REPOSITORY, YOU CERTIFY THAT THE CODE THAT YOU SUBMIT IS YOUR OWN AND THAT YOU RELEASE YOUR CONTRIBUTIONS UNDER THE PROJECT'S MIT LICENSE.
+DO NOT ADD COPYRIGHTED CODE TO THIS REPOSITORY. BY CONTRIBUTING CODE TO THIS REPOSITORY, YOU CERTIFY THAT THE CODE THAT YOU SUBMIT IS YOUR OWN AND THAT YOU RELEASE YOUR CONTRIBUTIONS UNDER THE PROJECT'S MIT LICENSE.
