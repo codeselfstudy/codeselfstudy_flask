@@ -1,0 +1,14 @@
+body {
+    margin-top: 61px;
+}
+footer {
+    color: #ccc;
+    margin-top: 21px;
+}
+footer a, footer a:visited {
+    color: #ccc;
+}
+footer a:hover {
+    color: #333;
+    text-decoration: underline;
+}
