@@ -17,6 +17,28 @@ Resources
 - `Flask example <https://github.com/CodeSelfStudy/Asteroid-API-Example>`_ -- a quick example application in Flask.
 - `Restructured Text Cheatsheet <https://github.com/ralsina/rst-cheatsheet/blob/master/rst-cheatsheet.rst>`_ -- This is a quick cheat sheet to help with formatting .rst documents.
 
+Coding Format
+-------------
+
+To keep editor config sane, let's try to use the same coding style. Proposed formats are below. Discuss in chatroom or forum if you have other ideas about it.
+
+Python:
+
+- Code should conform to PEP8 (an easy standard to follow).
+- Variable names and file names are snake_case.
+
+JavaScript:
+
+- Please use 4-space indentation (no tabs).
+- Functions should have a space between closing parenthesis and opening curly brace: :code:`function doSomething(n) { ... }`
+- Anonymous functions get a space before the parentheses (the function has no name): :code:`function (e) { ... }`
+- Camel case for variable names.
+- CSS IDs are camelCase: :code:`$('#someId')`
+- CSS classes are lowercase and have dashes: :code:`$('.some-class')`
+- Curly braces should be used, even when optional.
+- Semicolons should be used.
+- More info here: http://codeselfstudy.com/wiki/JavaScript_Coding_Style
+
 Licenses
 --------
 
