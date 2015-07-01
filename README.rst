@@ -1,7 +1,7 @@
 CodeSelfStudy.com
 =================
 
-This is the CodeSelfStudy.com website rebuilt in Flask/Python. More info will be posted here soon.
+This is the CodeSelfStudy.com website rebuilt in Flask with Python 3. More info will be posted here soon.
 
 Branches
 --------
