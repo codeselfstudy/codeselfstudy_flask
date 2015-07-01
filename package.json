@@ -1,0 +1,27 @@
+{
+  "name": "CodeSelfStudy.com",
+  "version": "0.0.1",
+  "description": "The website for CodeSelfStudy.com",
+  "main": "''",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeSelfStudy/codeselfstudy_flask.git"
+  },
+  "author": "Code Self Study",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CodeSelfStudy/codeselfstudy_flask/issues"
+  },
+  "homepage": "https://github.com/CodeSelfStudy/codeselfstudy_flask",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "jscs": "^1.13.1",
+    "jshint": "^2.8.0"
+  }
+}
