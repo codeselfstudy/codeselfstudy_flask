@@ -3,6 +3,12 @@ CodeSelfStudy.com
 
 This is the CodeSelfStudy.com website rebuilt in Flask/Python. More info will be posted here soon.
 
+Branches
+--------
+
+- :code:`master` -- don't use the master branch.
+- :code:`dev` -- you can edit the dev branch, but don't upload breaking changes.
+
 Structure
 ---------
 
