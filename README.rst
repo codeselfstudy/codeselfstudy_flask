@@ -9,7 +9,7 @@ Branches
 - :code:`master` -- don't use the master branch.
 - :code:`dev` -- you can edit the dev branch, but don't upload breaking changes.
 
-You can fork this repo and edit the `dev` branch. When ready to merge back into this repo, create a pull request. If unsure what to do, just ask. :)
+You can fork this repo and edit the `dev` branch. Or talk to us at the meetups about getting write access to the repo. When ready to merge back into this repo, create a pull request. If unsure what to do, just ask. :)
 
 Structure
 ---------
