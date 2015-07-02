@@ -32,5 +32,8 @@ def add_post():
         post = Post(title=form.title, content=form.content)
         post.save()
         return redirect('/')
-    return render_template('add_post.html', form=form)
+    else:
+        data = {}
+        data['title'] = 'Add New Post'
+        return render_template('add_post.html', form=form, data=data)
 
