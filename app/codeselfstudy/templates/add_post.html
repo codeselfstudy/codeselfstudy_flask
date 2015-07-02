@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <form action="/add-post" method="POST">
+            <input type="text" name="title" />
+            <textarea name="content"></textarea>
+            {{ form.csrf_token }}
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
