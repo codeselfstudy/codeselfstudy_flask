@@ -6,7 +6,7 @@
     <div class="post">
         <h2><a href="#">{{ post.title }}</a></h2>
         <p class="created-at">{{ post.created_at }}</p>
-        <p>{{ post.content[:100] }}&hellip;</p>
+        <p>{{ post.content|markdown }}</p>
     </div>
     {% endfor %}
 </section>

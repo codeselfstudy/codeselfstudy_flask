@@ -4,6 +4,7 @@ from flask_admin import Admin
 from .views.admin import AdminIndexView
 import mongoengine as me
 from flask_pagedown import PageDown
+from flask.ext.misaka import Misaka
 
 
 # Import routes and logic for each section of the website from the views directory
@@ -36,7 +37,9 @@ admin.add_view(AdminIndexView(name='Page III', endpoint='page3', category='Conte
 # Database
 me.connect(app.config['MONGODB_DB'])
 
-# Markdown
+# Markdown frontend
 pagedown = PageDown(app)
+# Markdown backend
+Misaka(app)
 
 register_blueprints(app)
