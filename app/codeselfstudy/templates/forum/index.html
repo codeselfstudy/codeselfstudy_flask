@@ -1,0 +1,13 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+<section class="container">
+    {% for post in data.posts %}
+    <div class="post">
+        <h2><a href="#">{{ post.title }}</a></h2>
+        <p class="created-at">{{ post.created_at }}</p>
+        <p>{{ post.content[:100] }}&hellip;</p>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}

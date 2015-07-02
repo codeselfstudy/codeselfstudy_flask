@@ -7,18 +7,21 @@ pages_bp = Blueprint('pages', __name__)
 @pages_bp.route('/')
 def index():
     """Generates the index page of the application."""
-    posts = []
-    for post in Post.objects[:5]:
-        posts.append({
-            post.title,
-            post.created_at,
-            post.content
-        })
 
     data = {}
     data['title'] = 'Code Self Study'
-    data['leader_text'] = posts
+    data['leader_text'] = '''Elit recusandae modi vitae voluptatum nam praesentium, placeat blanditiis est aperiam eligendi ea odio deserunt! Veritatis placeat nesciunt voluptate natus cum, consequatur praesentium praesentium est maxime earum dolorem? Excepturi laborum.'''
     return render_template('index.html', data=data)
+
+@pages_bp.route('/forum/')
+def forum_index():
+    posts = []
+    for post in Post.objects[:25].order_by('-created_at'):
+        posts.append(post)
+    data = {}
+    data['title'] = 'Code Self Study Forum'
+    data['posts'] = posts
+    return render_template('forum/index.html', data=data)
 
 @pages_bp.route('/about/')
 def about():
@@ -31,7 +34,9 @@ def about():
 def add_post():
     form = PostForm()
     if form.validate_on_submit():
-        post = Post(title=form.title.data, content=form.content.data)
+        post = Post(title=form.title.data,
+                    content=form.content.data,
+                    published=True)
         post.save()
         submitted_data = (form.title.data, form.content.data)
         # TODO: pass in the type of alert to show: warning, default, etc.
