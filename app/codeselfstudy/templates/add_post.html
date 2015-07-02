@@ -6,11 +6,12 @@
         {{ form.csrf_token }}
 
         <div class="form-group">
-            {{ form.title.label }} {{ form.title(size=30) }}
+            {{ form.title.label }}
+            {{ form.title(size=30, class='form-control') }}
         </div>
         <div class="form-group">
             {{ form.content.label }}
-            {{ form.content }}
+            {{ form.content(rows=9, class='form-control')}}
         </div>
         <div class="form-group">
             <div class="pull-right">

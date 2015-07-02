@@ -6,6 +6,6 @@ import mongoengine as me
 
 class Post(me.Document):
     title = me.StringField(max_length=120, required=True)
-    created_at = me.DateTimeField(default=datetime.datetime.now) #, required=True)
+    created_at = me.DateTimeField(default=datetime.datetime.now, required=True)
     content = me.StringField(required=True)
 

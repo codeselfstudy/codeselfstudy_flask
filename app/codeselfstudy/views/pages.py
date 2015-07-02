@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, flash, request
+from flask import Blueprint, render_template, redirect, url_for, flash
 from ..forms import PostForm
 from ..models.post import Post
 
@@ -8,11 +8,16 @@ pages_bp = Blueprint('pages', __name__)
 def index():
     """Generates the index page of the application."""
     posts = []
-    for post in Post.objects:
-        posts.append(post)
+    for post in Post.objects[:5]:
+        posts.append({
+            post.title,
+            post.created_at,
+            post.content
+        })
+
     data = {}
     data['title'] = 'Code Self Study'
-    data['leader_text'] = dir(posts)
+    data['leader_text'] = posts
     return render_template('index.html', data=data)
 
 @pages_bp.route('/about/')
@@ -31,11 +36,10 @@ def add_post():
         submitted_data = (form.title.data, form.content.data)
         # TODO: pass in the type of alert to show: warning, default, etc.
         flash('Your form data: {} | post: {}'.format(submitted_data,
-            dir(post)))
+                                                     dir(post)))
+        # TODO: redirect to completed post, not homepage
         return redirect('/')
-    print(dir(form))
-    #post = 
-    print(form.title.data, form.content.data)
+
     data = {}
     data['title'] = 'Add New Post'
     return render_template('add_post.html', form=form, data=data)
