@@ -2,24 +2,35 @@
 
 {% block content %}
 <section class="container">
-    <h1>Add a Post</h1>
-    <p>Fill out this form to add a post to the forum.</p>
-    <form action="/add-post" method="POST">
-        {{ form.csrf_token }}
+    <div class="row">
+        <h1>Add a Post</h1>
+        <p>Fill out this form to add a post to the forum.</p>
+        <form action="/add-post" method="POST">
+            {{ form.csrf_token }}
 
-        <div class="form-group">
-            {{ form.title.label }}
-            {{ form.title(size=30, class='form-control') }}
-        </div>
-        <div class="form-group">
-            {{ form.content.label }}
-            {{ form.content(rows=9, class='form-control')}}
-        </div>
-        <div class="form-group">
-            <div class="pull-right">
-                <button class="btn btn-primary btn-lg"type="submit">Submit</button>
+            <div class="form-group">
+                {{ form.title.label }}
+                {{ form.title(size=30, class='form-control') }}
             </div>
-        </div>
-    </form>
+            <div class="form-group">
+                {{ form.content.label }}
+                {{ form.content(rows=9, class='form-control')}}
+            </div>
+            <div class="form-group">
+                <div class="pull-right">
+                    {{ form.submit(class="btn btn-primary btn-lg") }}
+                </div>
+            </div>
+        </form>
+    </div>
 </section>
+{% endblock %}
+
+{% block footer_includes %}
+    {{ pagedown.include_pagedown() }}
+    <script>
+        $(document).ready(function () {
+            $('#flask-pagedown-content-preview').before('<h3>Preview</h3>');
+        });
+    </script>
 {% endblock %}
