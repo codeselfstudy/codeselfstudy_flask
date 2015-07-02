@@ -40,8 +40,7 @@ def add_post():
         post.save()
         submitted_data = (form.title.data, form.content.data)
         # TODO: pass in the type of alert to show: warning, default, etc.
-        flash('Your form data: {} | post: {}'.format(submitted_data,
-                                                     dir(post)))
+        flash('Your post was saved!')
         # TODO: redirect to completed post, not the forum index
         return redirect('/forum/')
 
