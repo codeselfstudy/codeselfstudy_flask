@@ -42,8 +42,8 @@ def add_post():
         # TODO: pass in the type of alert to show: warning, default, etc.
         flash('Your form data: {} | post: {}'.format(submitted_data,
                                                      dir(post)))
-        # TODO: redirect to completed post, not homepage
-        return redirect('/')
+        # TODO: redirect to completed post, not the forum index
+        return redirect('/forum/')
 
     data = {}
     data['title'] = 'Add New Post'
