@@ -22,6 +22,7 @@ Setup
 You should have a :code:`app/instance/config.py` file with sensitive variables in it. Required ones are below.
 
 .. code-block:: python
+
     SECRET_KEY = 'keyboard k41'
     MONGODB_SETTINGS = {'DB': 'codeselfstudy1'}
 
