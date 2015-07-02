@@ -2,6 +2,8 @@
 
 {% block content %}
 <section class="container">
+    <h1>Add a Post</h1>
+    <p>Fill out this form to add a post to the forum.</p>
     <form action="/add-post" method="POST">
         {{ form.csrf_token }}
 
