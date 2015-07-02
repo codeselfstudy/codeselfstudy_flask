@@ -11,7 +11,9 @@ from flask.ext.misaka import Misaka
 # Prevent circular imports
 def register_blueprints(app_instance):
     from .views.pages import pages_bp
-    app.register_blueprint(pages_bp)
+    from .views.forum import forum_bp
+    app_instance.register_blueprint(pages_bp)
+    app_instance.register_blueprint(forum_bp)
 
 app = Flask(__name__, instance_relative_config=True)
 
