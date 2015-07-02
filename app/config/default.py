@@ -7,10 +7,10 @@ DEBUG_TB_PANELS = (
     'flask_debugtoolbar.panels.request_vars.RequestVarsDebugPanel',
     'flask_debugtoolbar.panels.config_vars.ConfigVarsDebugPanel',
     'flask_debugtoolbar.panels.template.TemplateDebugPanel',
-    'flask_debugtoolbar.panels.sqlalchemy.SQLAlchemyDebugPanel',
+    #'flask_debugtoolbar.panels.sqlalchemy.SQLAlchemyDebugPanel',
     'flask_debugtoolbar.panels.logger.LoggingPanel',
     'flask_debugtoolbar.panels.route_list.RouteListDebugPanel',
     'flask_debugtoolbar.panels.profiler.ProfilerDebugPanel',
     # Additional
-    'flask.ext.mongoengine.panels.MongoDebugPanel',
+    #'flask.ext.mongoengine.panels.MongoDebugPanel',
 )

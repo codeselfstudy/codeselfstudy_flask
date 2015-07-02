@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_debugtoolbar import DebugToolbarExtension
-from flask.ext.mongoengine import MongoEngine
+import mongoengine as me
 
 
 # Import routes and logic for each section of the website from the views directory
@@ -21,6 +21,6 @@ app.config.from_pyfile('config.py')
 app.debug = True
 toolbar = DebugToolbarExtension(app)
 
-db = MongoEngine(app)
+me.connect(app.config['MONGODB_DB'])
 
 register_blueprints(app)
