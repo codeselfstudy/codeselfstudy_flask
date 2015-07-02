@@ -1,5 +1,7 @@
 from flask import Flask
 from flask_debugtoolbar import DebugToolbarExtension
+from flask_admin import Admin
+from .views.admin import AdminIndexView
 import mongoengine as me
 
 
@@ -20,6 +22,12 @@ app.config.from_pyfile('config.py')
 # TODO: move app.debug out of here.
 app.debug = True
 toolbar = DebugToolbarExtension(app)
+
+admin = Admin(app, name='Admin Panel')
+admin.add_view(AdminIndexView(name='Content', endpoint='someplace'))
+admin.add_view(AdminIndexView(name='Page I', endpoint='page1', category='Content Moderation'))
+admin.add_view(AdminIndexView(name='Page II', endpoint='page2', category='Content Moderation'))
+admin.add_view(AdminIndexView(name='Page III', endpoint='page3', category='Content Moderation'))
 
 me.connect(app.config['MONGODB_DB'])
 
