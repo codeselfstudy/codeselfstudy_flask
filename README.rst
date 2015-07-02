@@ -16,6 +16,16 @@ Structure
 2. docs -- contains any documentation that we generate
 3. sandbox -- contains any code snippets and experiments that people want to share with the team, without adding that code to the actual application
 
+Setup
+-----
+
+You should have a :code:`app/instance/config.py` file with sensitive variables in it. Required ones are below.
+
+.. codeblock
+    SECRET_KEY = 'keyboard k41'
+    MONGODB_SETTINGS = {'DB': 'codeselfstudy1'}
+
+
 Resources
 ---------
 

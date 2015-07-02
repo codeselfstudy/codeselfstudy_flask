@@ -7,12 +7,14 @@
 *.py[co]
 __pycache__/
 venv/
+instance/
 
 # Node
 node_modules/
 
 # Data
 *.sqlite3
+*.db
 
 # Misc.
 tmp/
