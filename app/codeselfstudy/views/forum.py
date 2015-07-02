@@ -9,7 +9,9 @@ def forum_index():
     """Generates the index page of the forum."""
 
     posts = []
-    for post in Post.objects[:25].order_by('-created_at'):
+    # TODO: Fix this non-working query. And add tests. :/
+    posts_query = Post.objects(published=True)[:25].order_by('-created_at')
+    for post in posts_query:
         posts.append(post)
     data = {}
     data['title'] = 'Code Self Study Forum'
