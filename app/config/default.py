@@ -14,3 +14,6 @@ DEBUG_TB_PANELS = (
     # Additional
     #'flask.ext.mongoengine.panels.MongoDebugPanel',
 )
+
+# Don't intercept redirects
+DEBUG_TB_INTERCEPT_REDIRECTS = False

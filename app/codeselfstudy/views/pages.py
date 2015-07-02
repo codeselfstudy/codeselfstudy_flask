@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for
+from flask import Blueprint, render_template, redirect, url_for, flash, request
 from ..forms import PostForm
 from ..models.post import Post
 
@@ -12,7 +12,7 @@ def index():
         posts.append(post)
     data = {}
     data['title'] = 'Code Self Study'
-    data['leader_text'] = posts
+    data['leader_text'] = dir(posts)
     return render_template('index.html', data=data)
 
 @pages_bp.route('/about/')
@@ -26,14 +26,17 @@ def about():
 def add_post():
     form = PostForm()
     if form.validate_on_submit():
-        print(dir(form))
-        #post = 
-        print(form.title, form.content)
-        post = Post(title=form.title, content=form.content)
+        post = Post(title=form.title.data, content=form.content.data)
         post.save()
+        submitted_data = (form.title.data, form.content.data)
+        # TODO: pass in the type of alert to show: warning, default, etc.
+        flash('Your form data: {} | post: {}'.format(submitted_data,
+            dir(post)))
         return redirect('/')
-    else:
-        data = {}
-        data['title'] = 'Add New Post'
-        return render_template('add_post.html', form=form, data=data)
+    print(dir(form))
+    #post = 
+    print(form.title.data, form.content.data)
+    data = {}
+    data['title'] = 'Add New Post'
+    return render_template('add_post.html', form=form, data=data)
 

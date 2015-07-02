@@ -6,12 +6,11 @@
         {{ form.csrf_token }}
 
         <div class="form-group">
-            <label for="title">Title:</label>
-            <input type="text" class="form-control">
+            {{ form.title.label }} {{ form.title(size=30) }}
         </div>
         <div class="form-group">
-            <label for="content">Content:</label>
-            <textarea name="content" class="form-control" rows="9"></textarea>
+            {{ form.content.label }}
+            {{ form.content }}
         </div>
         <div class="form-group">
             <div class="pull-right">
