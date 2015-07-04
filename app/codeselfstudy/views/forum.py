@@ -8,11 +8,8 @@ forum_bp = Blueprint('forum', __name__, url_prefix='/forum')
 def forum_index():
     """Generates the index page of the forum."""
 
-    posts = []
     # TODO: Fix this non-working query. And add tests. :/
-    posts_query = Post.objects(published=True)[:25].order_by('-created_at')
-    for post in posts_query:
-        posts.append(post)
+    posts = Post.objects(published=True)[:25].order_by('-created_at')
     data = {}
     data['title'] = 'Code Self Study Forum'
     data['posts'] = posts
