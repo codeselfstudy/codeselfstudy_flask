@@ -1,6 +1,9 @@
 import datetime
 import mongoengine as me
 
+# monod --> pymongo --> (monoengine!) ... could have also used ...> mongoalchemy|mongokit
+# but mongoengine was more popular
+
 
 # Based on: https://flask-mongoengine.readthedocs.org/en/latest/
 
