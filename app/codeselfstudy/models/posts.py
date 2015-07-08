@@ -3,7 +3,7 @@ import mongoengine as me
 
 # monod --> pymongo --> (monoengine!) ... could have also used ...> mongoalchemy|mongokit
 # but mongoengine was more popular
-
+# nerdcommenter vi commenting plugin
 
 # Based on: https://flask-mongoengine.readthedocs.org/en/latest/
 
@@ -16,18 +16,18 @@ class Post(me.Document):
     created_at = me.DateTimeField(default=datetime.datetime.now, required=True)
     content = me.StringField(required=True)
     published = me.BooleanField(required=True)
-    slug = me.StringField(max_length=155, required=True)
+    #slug = me.StringField(max_length=155, required=True)
     comments = me.ListField(me.EmbeddedDocumentField('Comment'))
+   
+#    def get_absolute_url(self):
+#        return url_for('post', kwargs={'slug': self.slug})
 
-    def get_absolute_url(self):
-        return url_for('post', kwargs={'slug': self.slug})
-
-    meta = {
-        'allow_inheritance': True,
-        'indexes': ['-created_at', 'slug'],
-        'ordering': ['-created_at']
-    }
-
+#    meta = {
+#        'allow_inheritance': True,
+#        'indexes': ['-created_at', 'slug'],
+#        'ordering': ['-created_at']
+#    }
+#
     # TODO: make sure this is what we want. It's based on the MongoEngine docs.
     # Doesn't seem to work
     #@me.queryset_manager
