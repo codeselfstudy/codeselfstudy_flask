@@ -4,7 +4,7 @@
 <section class="container">
     {% for post in data.posts %}
     <div class="post">
-        <h2><a href="#">{{ post.title }}</a></h2>
+        <h2><a href="/forum/{{ post._id }}">{{ post.title }}</a></h2>
         <p class="created-at">{{ post.created_at }}</p>
         <p style="color: #ccc;">Published: {{ post.published }} &lt;&mdash;to be converted into a class and removed from the main query for unauthenticated users</p>
         <p>{{ post.content|markdown }}</p>
