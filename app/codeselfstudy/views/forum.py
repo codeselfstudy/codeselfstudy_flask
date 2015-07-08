@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
 from ..forms import PostForm
-from ..models.post import Post
+from ..models.posts import Post
 
 forum_bp = Blueprint('forum', __name__, url_prefix='/forum')
 
