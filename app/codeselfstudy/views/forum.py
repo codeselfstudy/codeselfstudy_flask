@@ -13,7 +13,7 @@ def forum_index():
     data = {}
     data['title'] = 'Code Self Study Forum'
     data['posts'] = posts
-
+    data['breadcrumbs'] = ['Forum']
     return render_template('forum/index.html', data=data)
 
 @forum_bp.route('/add-post/', methods=['GET', 'POST'])
@@ -32,7 +32,9 @@ def add_post():
 
     data = {}
     data['title'] = 'Add New Forum Post'
+    data['breadcrumbs'] = ['Forum', 'Add Post']
     return render_template('forum/add_post.html', form=form, data=data)
+
 @forum_bp.route('/p/<post_id>/')
 def post_detail(post_id):
     # will raise DoesNotExist if no document matches this id
@@ -40,4 +42,5 @@ def post_detail(post_id):
     data = {}
     data['title'] = post.title
     data['post'] = post
+    data['breadcrumbs'] = ['Forum', data['title']]
     return render_template('forum/post_detail.html',data=data);
