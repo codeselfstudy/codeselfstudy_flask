@@ -32,4 +32,11 @@ def add_post():
     data = {}
     data['title'] = 'Add New Post'
     return render_template('forum/add_post.html', form=form, data=data)
-
+@forum_bp.route('/p/<post_id>/')
+def post_detail(post_id):
+    # will raise DoesNotExist if no document matches this id
+    post = Post.objects.get(id=post_id)
+    data = {}
+    data['title'] = post.title
+    data['post'] = post
+    return render_template('forum/post_detail.html',data=data);
