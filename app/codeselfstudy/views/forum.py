@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, redirect, url_for, flash
 from ..forms import PostForm
 from ..models.posts import Post
+from random import randint
 
 forum_bp = Blueprint('forum', __name__, url_prefix='/forum')
 
@@ -13,6 +14,7 @@ def forum_index():
     data = {}
     data['title'] = 'Code Self Study Forum'
     data['posts'] = posts
+
     return render_template('forum/index.html', data=data)
 
 @forum_bp.route('/add-post', methods=['GET', 'POST'])
