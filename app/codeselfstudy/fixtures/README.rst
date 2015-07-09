@@ -1,1 +1,1 @@
-The text content on the website (inserted into the database from this fixtures directory) is **not** licensed under the MIT license. It is specific to the CodeSelfStudy.com website and is not for reproduction.
+The files in this directory are used to seed the database with initial data.
