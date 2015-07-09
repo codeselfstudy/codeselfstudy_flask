@@ -28,7 +28,7 @@ def add_post():
         # TODO: pass in the type of alert to show: warning, default, etc.
         flash('Your post was saved!')
         # TODO: redirect to completed post, not the forum index
-        return redirect('/forum/')
+        return redirect('/forum/p/{}/'.format(post.id))
 
     data = {}
     data['title'] = 'Add New Forum Post'
